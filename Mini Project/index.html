@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Molly's Microbakery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo"><img src="./assests/MB Logo.png" alt="MB Logo"></div>
+        <div>
+            <ul class="nav-links">
+                <li><a href=#about>About</a></li>
+                <li><a href=#menu>Menu</a></li>
+                <li><a href=#order>Order</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Molly Blunier Microbakery</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="menu-links">
+            <li><a href=#about onclick="toggleMenu()">About</a></li>
+            <li><a href=#menu onclick="toggleMenu()">Menu</a></li>
+            <li><a href=#order onclick="toggleMenu()">Order</a></li>
+        </div>
+        </div>
+    </nav>
+
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./assests/aboutMe.JPG" alt="Molly Blunier Profile Picture">
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Welcome to</p>
+            <h1 class="title">Molly Blunier's Microbakery</h1>
+            <p class="section__text__p2">Located in Richmond, Virginia</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onClick="location.href='./#menu'">This Week's Menu</button>
+                <button class="btn btn-color-1" onClick="location.href='./#order'">Order Here</button>
+            </div>
+            <div id="socials-container">
+                <img src="./assests/facebook.png" 
+                alt="Sourdough Facebook Community" 
+                class="icon" 
+                onClick="location.href='https://www.facebook.com/groups/388940580424501/'">
+                <img src="./assests/instagram.png" 
+                alt="Molly Blunier Instagram" 
+                class="icon" onClick="location.href='https://www.instagram.com/mollyblunier/'">
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <p class="section__text__p1">Who We Are At</p>
+        <h1 class="title">Molly Blunier's Microbakery</h1>
+        <div class="section-container">
+            <div class="section__pic-container">
+                <img src="./assests/aboutPic.jpg" 
+                alt="Photo of Molly and Jake" 
+                class="about-pic">
+            </div>
+                    <div class="text-container"> 
+                        <p>Welcome to our Molly Blunier's Microbakery! My name is Molly, 
+                            and I'm the passionate baker behind this cozy microbakery. 
+                            With a lifelong love of all things delicious and bread, my husband, Jake and I founded 
+                            this small-scale bakery to share my creations with the local community. 
+                            Every loaf of bread, every bagel, and every treat is lovingly 
+                            handcrafted using only the finest ingredients and traditional 
+                            techniques. Thank you for being a part of our community.</p>
+                    </div>
+        </div>
+        <img src="./assests/downarrow.png" alt="arrow" class="icon arrow" onclick="location.href='./menu'">
+    </section>
+    <section id="menu">
+        <h1>Menu</h1>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="./assests/assortedBagels.jpg" alt="assorted bagels" class="menu_pic">
+                <h2>Assorted Sourdough Bagels</h2>
+                <p>Bagels are available by the half dozen ($6) and full dozen ($18) in the type of your choosing.</p>
+            </div>
+            <div class="menu-item">
+                <img src="./assests/chocolateSourdough.jpg" alt="chocolateSourdough" class="menu_pic">
+                <h2>Sourdough</h2>
+                <p>Sourdough loaves are avaiable for $12. You can add inclusions for $2.</p>
+            </div>
+            <div class="menu-item">
+                <img src="./assests/plainSourdough.jpg" alt="PlainSourdough" class="menu_pic">
+                <h2>Sourdough</h2>
+                <p>Sourdough loaves are avaiable for $12. You can add inclusions for $2.</p>
+            </div>
+        </div>
+    </section>
+    <div class="order">
+        <h2>Bakery Order Form</h2>
+        <form action="#">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Format: 123-456-7890" required>
+    
+            <label for="plainSourdough">
+                <input type="checkbox" id="plainSourdough" name="plainSourdough"> Plain Sourdough
+            </label>
+            <label for="chocolateSourdough">
+                <input type="checkbox" id="chocolateSourdough" name="chocolateSourdough"> Chocolate Sourdough
+            </label>
+            <label for="bagels">
+                <input type="checkbox" id="bagels" name="bagels"> Bagels
+            </label>
+            <button type="submit">Place Order</button>
+        </form>
+    </div>
+    <div>
+        <footer>
+            <h4>Thank you for coming to my website!</h4>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
